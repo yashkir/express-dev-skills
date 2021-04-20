@@ -1,0 +1,8 @@
+<h1>My Skills</h1>
+<ul>
+    <% skills.forEach((skill) => { %>
+    <li><a href="/skills/<%= skill.id %>"><%= skill.title %></li>
+    <% }); %>
+</ul>
+
+<a href="/">back</a>
