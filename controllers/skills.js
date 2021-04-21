@@ -9,7 +9,19 @@ function show(req, res, next) {
     res.render('skills/show', { title: "Skill - " + skill.title, skill: skill });
 }
 
+function newSkill(req, res) {
+    res.render('skills/new', { title: "Add Skill" });
+}
+
+function create(req, res) {
+    console.log("creating");
+    Skill.create(req.body.title, req.body.description);
+    res.redirect('/skills');
+}
+
 module.exports = {
     index,
     show,
+    new: newSkill,
+    create,
 }

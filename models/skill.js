@@ -15,6 +15,8 @@ const skills = [
     },
 ]
 
+let nextId = 3;
+
 function getAll() {
     return skills;
 }
@@ -23,7 +25,13 @@ function getOne(id) {
     return skills.find(skill => skill.id == id);
 }
 
+function create(title, description) {
+    skills.push({ id: nextId++, title, description});
+    console.log(skills);
+}
+
 module.exports = {
     getAll,
     getOne,
+    create,
 }
