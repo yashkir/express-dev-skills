@@ -1,9 +1,9 @@
 <h1>My Skills</h1>
-<a href="/skills/new">Add Skill</a>
-<ul>
+<a href="/" class="btn" >back</a>
+<a href="/skills/new" class="btn orange waves-effect">Add Skill</a>
+<ul class="collection">
     <% skills.forEach((skill) => { %>
-    <li><a href="/skills/<%= skill.id %>"><%= skill.title %></a></li>
+    <li class="collection-item"><a href="/skills/<%= skill.id %>"><%= skill.title %></a></li>
     <% }); %>
 </ul>
 
-<a href="/">back</a>
