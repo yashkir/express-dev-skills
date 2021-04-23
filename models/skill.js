@@ -30,8 +30,13 @@ function create(title, description) {
     console.log(skills);
 }
 
+function _delete(id) {
+    skills.splice(skills.findIndex(skill => skill.id == id), 1);
+}
+
 module.exports = {
     getAll,
     getOne,
     create,
+    delete: _delete
 }
