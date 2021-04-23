@@ -24,10 +24,24 @@ function _delete(req, res) {
     res.redirect('/skills');
 }
 
+function edit(req, res) {
+    res.render('skills/edit', {
+        title: "Edit Skill", 
+        skill: Skill.getOne(req.params.id)
+    });
+}
+
+function patch(req, res) {
+    Skill.update(req.params.id, req.body.title, req.body.description);
+    res.redirect('/skills');
+}
+
 module.exports = {
     index,
     show,
     new: newSkill,
     create,
     delete: _delete,
+    edit,
+    patch,
 }

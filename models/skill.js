@@ -34,9 +34,14 @@ function _delete(id) {
     skills.splice(skills.findIndex(skill => skill.id == id), 1);
 }
 
+function update(id, title, description) {
+    skills[skills.findIndex(skill => skill.id == id)] = {id, title, description };
+}
+
 module.exports = {
     getAll,
     getOne,
     create,
-    delete: _delete
+    delete: _delete,
+    update,
 }

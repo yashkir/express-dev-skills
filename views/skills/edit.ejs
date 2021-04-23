@@ -1,0 +1,10 @@
+<h1>Edit Skill</h1>
+<form action="/skills/<%= skill.id %>?_method=PATCH" method="POST" class="add-skill-form">
+  <label for="title">Skill Title</label>
+  <input type="text" name="title" id="title"
+         value="<%= skill.title %>"/>
+  <label for="description">Skill Description</label>
+  <input type="text" name="description" id="description"
+         value="<%= skill.description %>"/>
+  <button type="submit" class="btn waves-effect">Update Skill</button>
+</form>

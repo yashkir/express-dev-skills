@@ -1,6 +1,7 @@
 <h1><%= skill.title %></h1>
 <p><%= skill.description %></p>
 <a href="/skills" class="btn">back</a>
-<form action="/skills/<%= skill.id %>?_method=DELETE" method="POST">
+<a href="/skills/<%= skill.id %>/edit" class="btn blue">Edit</a>
+<form style="display: inline" action="/skills/<%= skill.id %>?_method=DELETE" method="POST">
   <button type="submit" class="btn red">Delete Skill</a>
 </form>
